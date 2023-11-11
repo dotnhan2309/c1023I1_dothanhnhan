@@ -1,0 +1,23 @@
+package ss3;
+
+import java.util.Scanner;
+
+public class Lai {
+    public static void main(String[] args) {
+        double tienGui;
+        int thang;
+        double lai;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap so tien gui");
+        tienGui = scanner.nextDouble();
+        System.out.println("Nhap so thang");
+        thang = scanner.nextInt();
+        System.out.println("Nhap lai:");
+        lai = scanner.nextDouble();
+        double tongLai=0;
+        for (int i = 0; i<thang; i++) {
+            tongLai += tienGui * (lai/100)/12 * thang;
+        }
+        System.out.println("Tien lai la " +tongLai);
+    }
+}
