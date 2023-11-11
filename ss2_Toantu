@@ -1,0 +1,17 @@
+package ss2;
+
+import java.util.Scanner;
+
+public class toantu {
+    public static void main(String[] args) {
+        float a;
+        float b;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap chieu dai:");
+        a = scanner.nextFloat();
+        System.out.println("Nhap chieu rong:");
+        b = scanner.nextFloat();
+        float c = a*b;
+        System.out.println("Dien tich la: " +c);
+    }
+}
