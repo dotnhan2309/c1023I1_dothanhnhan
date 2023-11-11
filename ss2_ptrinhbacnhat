@@ -1,0 +1,17 @@
+package ss2;
+
+import java.util.Scanner;
+
+public class ptrinhbacnhat {
+    public static void main(String[] args) {
+        float a;
+        float b;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap a: ");
+        a = scanner.nextFloat();
+        System.out.println("Nhap b: ");
+        b = scanner.nextFloat();
+        float x = -b/a;
+        System.out.println("Kết quả là : "+ x);}
+
+}
