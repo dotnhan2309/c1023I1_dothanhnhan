@@ -1,0 +1,22 @@
+package ss3;
+
+import java.util.Scanner;
+
+public class nguyento {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        boolean check = true;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            System.out.println(num + " La so ngyen to");
+        } else {
+            System.out.println(num + " Khong phai la so nguyen to");
+        }
+    }
+}
