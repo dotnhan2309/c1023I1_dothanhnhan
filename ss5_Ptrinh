@@ -1,0 +1,66 @@
+package ss5;
+
+import java.util.Scanner;
+
+public class Ptinh {
+    double a,b,c;
+    public Ptinh(){
+    }
+
+    public Ptinh (double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public double getC() {
+        return c;
+    }
+    public double getDiscriminant() {
+        return this.b * this.b - 4 * this.a * this.c;
+    }
+    public double getRoot1() {
+        double delta = getDiscriminant();
+        if (delta < 0) {
+            return 0;
+        } else {
+            return (-this.b + Math.pow(delta, 0.5)) / (2 * this.a);
+        }
+    }
+    public double getRoot2() {
+        double delta = getDiscriminant();
+        if (delta < 0) {
+            return 0;
+        } else {
+            return (-this.b - Math.pow(delta, 0.5)) / (2 * this.a);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap a:");
+        double a = scanner.nextDouble();
+        System.out.println("Nhap b:");
+        double b = scanner.nextDouble();
+        System.out.println("Nhap c:");
+        double c = scanner.nextDouble();
+        Ptinh ptinh = new Ptinh(a,b,c);
+        double delta = ptinh.getDiscriminant();
+        if (delta > 0) {
+            System.out.println("Root1: " + ptinh.getRoot1());
+            System.out.println("Root2: " + ptinh.getRoot2());
+        }if (delta == 0) {
+                System.out.println("Root: " + ptinh.getRoot1());
+        }else {
+            System.out.println("The equation has no roots");
+        }
+    }
+}
+
