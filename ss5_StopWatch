@@ -1,0 +1,42 @@
+package ss5;
+
+public class StopWatch {
+    private Long startTime;
+    private Long endTime;
+
+    public Long getStartTime() {
+        return startTime;
+    }
+
+    public Long getEndTime() {
+        return endTime;
+    }
+
+    public StopWatch(){
+        this.startTime = System.currentTimeMillis();
+    }
+
+    public void start() {
+        this.startTime = System.currentTimeMillis();
+    }
+
+    public void stop() {
+        this.endTime = System.currentTimeMillis();
+    }
+
+    public Long getElapsedTime() {
+        return this.endTime - this.startTime;
+    }
+
+    public static void main(String[] args) {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
+        //thuật toán
+        for(int i = 0; i< 100000; i++) {
+            int a = 5;
+            a+=10;
+        }
+        stopWatch.stop();
+        System.out.println(stopWatch.getElapsedTime());
+    }
+}
