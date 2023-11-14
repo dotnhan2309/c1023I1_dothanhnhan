@@ -1,0 +1,85 @@
+package ss5;
+
+public class Fan {
+    private final int SLOW = 1;
+
+    private final int MEDIUM = 2;
+    private final int FAST = 3;
+
+    private int speed;
+    private String color;
+    private double radius;
+
+    private boolean on;
+
+    public int getSLOW() {
+        return SLOW;
+    }
+
+    public int getMEDIUM() {
+        return MEDIUM;
+    }
+
+    public int getFAST() {
+        return FAST;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public boolean isOn() {
+        return on;
+    }
+
+    public void setOn(boolean on) {
+        this.on = on;
+    }
+
+    public Fan() {
+        this(1, "blue", 5, false);
+    }
+
+    public Fan(int speed, String color, double radius, boolean on) {
+        this.speed = speed;
+        this.color = color;
+        this.radius = radius;
+        this.on = on;
+    }
+
+    public String toString() {
+        if(this.on) {
+            return "Speed: "+this.speed+"...."+ "fan is on";
+        } else {
+            return "color: "+ this.color+"...."+"fan is off";
+        }
+    }
+
+    public static void main(String[] args) {
+        Fan fan = new Fan(); //đang bật hay tắt
+        System.out.println(fan);
+        fan.setOn(true);
+        System.out.println(fan);
+
+    }
+}
