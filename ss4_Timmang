@@ -1,0 +1,23 @@
+package ss4;
+
+import java.util.Scanner;
+
+public class Timmang {
+    public static void main(String[] args) {
+        String [] name = {"Tam","Tu","Trung","Quynh","An","Tuan"};
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap ten:");
+        String input_name = scanner.nextLine();
+        boolean isExist = false;
+        for (int i = 0; i < name.length; i++) {
+            if (name[i].equals(input_name)) {
+                System.out.println("Vi tri cua ten trong danh sach " +input_name + " la " +i);
+            isExist = true;
+            break;
+            }
+        }
+        if (!isExist) {
+            System.out.println(input_name+ " khong co trong danh sach name");
+        }
+    }
+}
