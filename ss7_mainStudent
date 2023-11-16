@@ -1,0 +1,36 @@
+package ss7;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class MainStudent {
+    public static void main(String[] args) {
+        Student student1 = new Student("Nhan",20,"Da Nang");
+        Student student2 = new Student("Tam",21,"Ha Noi");
+        Student student3 = new Student("Hieu", 19,"HCM");
+        Student student4 = new Student("An", 22, "Da Nang");
+        Student student5 = new Student("Binh", 20, "Ha Noi");
+
+        Map<Integer, Student> studentMap = new HashMap<>();
+        studentMap.put(1,student1);
+        studentMap.put(2,student2);
+        studentMap.put(3,student3);
+        studentMap.put(4,student4);
+        studentMap.put(5,student5);
+        for (Map.Entry<Integer,Student> temp: studentMap.entrySet()) {
+            System.out.println(temp.getValue());
+        }
+
+        Set<Student> studentSet = new HashSet<>();
+        studentSet.add(student1);
+        studentSet.add(student2);
+        studentSet.add(student3);
+        studentSet.add(student4);
+        studentSet.add(student5);
+        for (Student temp: studentSet) {
+            System.out.println(temp);
+        }
+    }
+}
