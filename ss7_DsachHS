@@ -1,0 +1,32 @@
+package ss7;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class DSHocSinh {
+    public static void main(String[] args) {
+        Map<String , Integer> map = new HashMap<>();
+        map.put("Nhan",21);
+        map.put("Quynh",20);
+        map.put("Trung", 25);
+        map.put("An", 18);
+        System.out.println(map);
+
+        //Tăng dần
+        Map<String, Integer> Treemap = new TreeMap<>(map);
+        System.out.println(Treemap);
+        // Giảm dần
+        Map<String, Integer> TreemapD = new TreeMap<>(map).descendingMap();
+        System.out.println(TreemapD);
+
+        Map<String, Integer> linked = new LinkedHashMap<>();
+        linked.put("Nhan", 21);
+        linked.put("Quynh", 20);
+        linked.put("Trung", 25);
+        linked.put("An", 18);
+        System.out.println(linked);
+    }
+
+}
